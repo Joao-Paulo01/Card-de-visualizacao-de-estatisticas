@@ -60,7 +60,7 @@ main {
 
 .text-box .dados {
   display: flex;
-  gap: 20px;
+  gap: 50px;
 }
 
 .dados ul {
