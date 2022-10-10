@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+ul, li {
+  list-style: none;
+}
+
+/* ===== layout ===== */
+
+html {
+  background-color: hsl(233, 47%, 7%);;
+}
+
+section {
+  width: 100vw;
+  height: 100vh; 
+  background-color: hsl(233, 47%, 7%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  background-color: hsl(244, 38%, 16%);
+  width: 1080px;
+  border-radius: 10px;
+}
+
+/* ===== text box ===== */
+
+.text-box {
+  padding: 70px 60px 60px 60px;
+}
+
+.text-box h1 {
+  font-size: 36px;
+  color: white;
+  padding-right: 20px;
+}
+
+.text-box span {
+  color: hsl(277, 64%, 61%);
+  font-size: 32px;
+}
+
+.text-box p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 15px;
+  padding-right: 55px;
+  line-height: 25px;
+  margin: 20px 0 65px 0;
+}
+
+.text-box .dados {
+  display: flex;
+  gap: 20px;
+}
+
+.dados ul {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.dados ul li:first-child {
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.dados ul li:nth-child(2) {
+  color: hsla(0, 0%, 100%, 0.6);
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+
+.img-1 {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  mix-blend-mode: soft-light;
+  background: #aa5cdb;
+
+
+  -webkit-filter:  brightness(59%) contrast(84%) grayscale(0%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(146%) sepia(35%);
+  filter:  brightness(59%) contrast(84%) grayscale(0%) hue-rotate(0deg) invert(0%) opacity(100%) saturate(146%) sepia(35%);
+  mix-blend-mode: none;
+}
+
+
+/* The .image-container class needs to be applied to a div wrapped around the image you want to apply this filter to */
+picture {
+  display: inline-block;
+  position: relative;
+  line-height: 0;
+  
+}
+picture::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  mix-blend-mode: soft-light;
+  background: #c010d887;
+  opacity: 1;
+  filter: brightness(10); 
+}
+
+
+@media (max-width: 1140px) {
+  main {
+    width: 423px;
+    height: 800px;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .img-1 {
+    height: 350px;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .text-box {
+    height: 100%;
+    padding: 40px 50px 50px 50px;
+    text-align: center;
+  }
+
+  .text-box h1, .text-box p {
+    padding: 0;
+  }
+  
+  .text-box h1 {
+    font-size: 30px;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .text-box p {
+    margin: 25px 0 65px 0;
+  }
+
+  .dados {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 460px) {
+  main {
+    width: 340.63px;
+    height: 800px;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+  }
+
+  .img-1 {
+    height: 250px;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .text-box {
+    padding: 40px 30px 50px 30px;
+  }
+
+  .text-box h1 {
+    width: 100%;
+  }
+
+  .text-box p {
+    margin: 25px 5px 40px 5px;
+  }
+
+  .dados {
+    flex-direction: column;
+  }
+}
